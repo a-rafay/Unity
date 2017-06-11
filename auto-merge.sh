@@ -9,7 +9,7 @@ echo Automatically merging commit $LAST_COMMIT from $CURRENT_BRANCH rippling to 
 
 case $CURRENT_BRANCH in
 Paranoid)
-  git checkout master ＆＆ git merge Paranoid
+  git checkout master && git merge Paranoid
   git checkout $CURRENT_BRANCH
   ;;
 esac
