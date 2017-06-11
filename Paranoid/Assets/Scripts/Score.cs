@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
-
 	public static bool incrementNow = false;
+
 	static int newScore;
 	static int oldScore;
 
@@ -13,6 +13,7 @@ public class Score : MonoBehaviour {
 		newScore = Brick.score;
 		oldScore = newScore;
 	}
+
 	// Update is called once per frame
 	void Update () {
 		if (incrementNow) {

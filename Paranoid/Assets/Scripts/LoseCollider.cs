@@ -9,10 +9,9 @@ public class LoseCollider : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		//Debug.Log ("Collision (type: trigger) detected");
+		// TODO
 	}
 	void OnCollisionEnter2D(Collision2D collision) {
-		//Debug.Log ("Collision (type: collision) detected");
 		Brick.score = 0;
 		levelManager.LoadLevel ("Lose");
 	}

@@ -10,7 +10,6 @@ public class LevelManager : MonoBehaviour {
 		if (name == "Start") {
 			Brick.score = 0;
 		}
-		//Debug.Log ("Loading level " + name);
 		SceneManager.LoadScene (name);
 	}
 

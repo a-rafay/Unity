@@ -3,14 +3,14 @@ using System.Collections;
 using System;
 
 public class Paddle : MonoBehaviour {
-	public static bool autoPlay = true;
-
 	int X_BLOCKS = 16;
+	public static bool autoPlay = true;
+	public static int fsmStatesIndex = 0;
+
 	float mouseLastPos;
 	private Ball ball;
 	private KeyCode[] fsmStates = {KeyCode.S, KeyCode.A, KeyCode.V, KeyCode.E};
 	private KeyCode thisKeyPressed;
-	public static int fsmStatesIndex = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +33,8 @@ public class Paddle : MonoBehaviour {
 					mouseLastPos = Input.mousePosition.x;
 					updatePaddle (Input.mousePosition.x / Screen.width * X_BLOCKS, yPos, zPos);
 				}
-			
+
+				// Updatind the paddle for keyboard movement
 				bool rightKeyPressed = Input.GetKey (KeyCode.RightArrow);
 				bool leftKeyPressed = Input.GetKey (KeyCode.LeftArrow);
 				if (rightKeyPressed) {
